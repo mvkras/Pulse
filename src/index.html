@@ -6,10 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="CSS/fonts.css">
     <link rel="stylesheet" href="CSS/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/style.min.css">
     <title>Pulse</title>
 </head>
 <body>
-    
+    <!-- Создаем первый слой Promo -->
+    <section class="promo">
+        <div class="container">
+            <header class="header"> <!-- Создаем главный блок header, который будем потом использовать -->
+                 <!-- Создали элементы этого блока header -->
+                <a href="#" class="header__logo"> <!-- Элемент блока header -->
+                    <img src="img/background/logo.png" alt="Логотип компании">
+                </a>   
+
+                <div class="header__official">  <!-- Элемент какой-то информации на сайте -->
+                    Официальный представитель
+                    <span>Garmin, Polar, Suunto</span>
+                </div>  
+                
+                <div class="header__contacts"> <!-- Элемент контактов для связи -->
+                <a href="tel:+74999228974" class="header__phone">+7 (499) 922-89-74</a><!-- Создали отдельный элемент -->
+
+                <button class="button">заказать звонок</button>  <!--Создали отдельный блок button с классом button и будем его переиспользовать  -->
+            </div> 
+            </header>
+            <!-- ------Конец элементов блока header------------- -->
+            <!-- Создадим обвертку для этих  классов, чтобы можно было их потом двигать, ровнять в правому краю -->
+            <div class="promo__wrapper"> <!-- Начало обвертки -->
+            <h1 class="promo__header">Подбор пульсометра</h1>
+            <h2 class="promo__subheader">с учётом Вашего уровня подготовки</h2>
+
+            <div class="promo__icons"> <!-- Создали блок для иконок -->
+                 <div class="promo__icon">
+                <img src="img/pictures/bg_icon1.png" alt="Секундомер">Время подбора: 10 минут</div>
+                 <div class="promo__icon">
+                <img src="img/pictures/bg_icon2.png" alt="Доставка">Бесплатная доставка </div>
+            <div class="promo__icon"><img src="img/pictures/bg_icon3.png" alt="Чат">Ответим на все вопросы</div>
+        </div> <!-- Конец блока для иконок -->
+
+            <button class="button button_main">заказать консультацию</button> <!--Сделали модификатор для кнопки main  -->
+            <div class="promo__link">или <a href="#"> ПЕРЕЙТИ В КАТАЛОГ </a></div>
+
+            </div> <!-- Конец обвертки -->
+
+        </div>
+    </section>
+
+
+
 </body>
 </html>
