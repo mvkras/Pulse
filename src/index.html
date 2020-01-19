@@ -54,7 +54,7 @@
 	<!------------------------- СЕКЦИЯ ПРИЕМУЩЕСТВА------------------ -->
 	<section class="advantages">
 		<div class="container">
-			<h2 class="head_text">НАШИ ПРЕИМУЩЕСТВА</h2>
+			<h2 class="head-text">НАШИ ПРЕИМУЩЕСТВА</h2>
 			<div class="advantages__wrapper">
 				<div class="advantages__items">
 					<img src="img/icons/icon1.png" alt="Значок_1" class="advantages__img">
@@ -81,7 +81,27 @@
 		</div>
 	</section>
 
+<!----------------------------Секция с формой консультации----------------- -->
+<section class="consultation">
+	<div class="container">
+		<h2 class="head-text head-text_left">Получите бесплатную консультацию <br> <!-- Установили модификатор head-text_left (текст слева)-->
+			по подбору пульсометра </h2>
+			<div class="consultation__descr">Просто заполните форму заявки <br>
+				и мы перезвоним вам в течении 10 минут</div>
+
+<!-- -------------ДЕЛАЕМ ФОРМУ ЗАПОЛНЕНИЯ------- -->
+	<form class="feed-form" action="#" method="POST"> <!-- Создаем новый файл для форм, так как будем их переиспользовать потом -->
+		<input required type="text" name="name" placeholder="Ваше имя" autofocus>  <!-- required - это поле для обязательного заполнения -->
+		<input required type="number" name="phone" placeholder="Ваш телефон">   <!-- чтобы вводились только числа в это поле, пишем тип number -->
+		<input required type="email" name="e-mail" placeholder="Ваша почта"> 
+		<button class="button button_submit" >заказать консультацию"</button>		
+	</form>
+	</div>
+</section>
+<!-- НАЧАЛО НОВОЙ СЕКЦИИ -->
 
 
+<!-- ПОДКЛЮЧАЕМ JavaScript -->
+<script src="js/script.js"></script>
 </body>
 </html>

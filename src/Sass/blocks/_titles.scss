@@ -1,7 +1,13 @@
 /* Стилизуем заголовки */
-.head_text {
+.head-text {
     text-align: center;
     color: #0d0d0d;
     font-size: 30px;
     font-weight: 700;
+    text-transform: uppercase;
+    &_left{  /* Модификатор для текста с формой заполнения, текст слева */
+        color: #ffffff;
+        font-size: 36px;
+        text-align: left;
+    }
 }

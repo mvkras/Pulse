@@ -1,0 +1,25 @@
+/* Кастомизируем наши формы, в дальнейшем будем их переиспользовать */
+.feed-form {  /* Подключаем этот файл в style.scss @import 'blocks/forms'; */
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    /* Стилизуем input */
+    input {
+       padding: 0 20px; /* Устанавливаем отступ с края, чтобы текст вводился красивей */
+        margin-bottom: 15px;
+        height: 50px;
+        border-radius: 5px;
+        background-color: #ffffff;
+        border: none; /* Убираем границу */
+        color: #4b4b4b;
+        font-size: 14px;
+        font-weight: 300;
+        /* Стилизуем кнопку */
+        &:nth-child(3) {  
+            margin-bottom: 20px;
+        }
+    }
+    
+    
+}

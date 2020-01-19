@@ -3,7 +3,10 @@
 @import 'blocks/header';  /*подключили файл header который будем переиспользовать там логотип гл секция  */
 @import 'blocks/advantages';
 @import 'blocks/buttons'; /* Блок кнопки */
-@import 'blocks/titles';
+@import 'blocks/titles'; /* подключили блок с заголовками, для дальнейшего использования и кастомизации */
+@import 'blocks/consultation';  /* Подключили секцию с формой заполнения */
+@import 'blocks/forms';/* Импортируем блок формы заполнения, будем их переиспользовать */
+
 *{
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
