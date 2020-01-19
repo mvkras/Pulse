@@ -1,7 +1,9 @@
 @import 'base/variables'; /* подключили файл значения из папки база */
 @import 'blocks/promo'; /* Подключили файл промо из папки blocks */
-@import 'blocks/header';  /*подключили файл header который будем переиспользовать там логотип гл секция  */ 
+@import 'blocks/header';  /*подключили файл header который будем переиспользовать там логотип гл секция  */
+@import 'blocks/advantages';
 @import 'blocks/buttons'; /* Блок кнопки */
+@import 'blocks/titles';
 *{
     font-family: 'Museo Sans Cyrl', sans-serif;
 }
