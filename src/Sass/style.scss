@@ -6,6 +6,7 @@
 @import 'blocks/titles'; /* подключили блок с заголовками, для дальнейшего использования и кастомизации */
 @import 'blocks/consultation';  /* Подключили секцию с формой заполнения */
 @import 'blocks/forms';/* Импортируем блок формы заполнения, будем их переиспользовать */
+@import 'blocks/carousel';
 
 *{
     font-family: 'Museo Sans Cyrl', sans-serif;

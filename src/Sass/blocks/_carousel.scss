@@ -1,0 +1,31 @@
+/* Стилизуем Слайдеры/карусели*/
+.carousel {  /* Подключаем файл в style.scss через @import 'blocks/carousel' */
+    
+    padding: 81px 0;
+    &__inner {
+        position: relative;
+        margin: 0 auto;  /* ставим по центру */
+        width: 750px;       
+
+    }
+    /* Стилизуем стрелки */
+    .slick-prev, .slick-next {  /* Это inline объект */
+        /* Двигаем кнопку по центру и вправо */
+        position: absolute; 
+        border: none; 
+        top: 50%;
+        transform: translateY(-50%);  /* Выравниваем таким образом по центру */
+        left: -66px;
+        background-color: #ffffff;
+        img{
+            width: 31px;
+            height: 50px;
+        }
+        
+    }
+    .slick-next {
+        left: auto;
+        right: -66px;
+    }
+   
+}
