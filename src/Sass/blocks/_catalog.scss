@@ -42,12 +42,18 @@
     /* Стилизуем карточки сами карточки в отдельном файле, сделали его отдельным блоком */
     &__content {  
         margin-top: 60px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap; /* Чтобы все не помещающиеся карточки скидывались вниз */
+        
     }
         &-item {
             width: 300px;
             min-height: 440px;  /* при необходимости экран будет растягиваться */
             border: 2px solid #e8e8e8;
             padding: 20px 20px 26px 20px; /* ограничим весь контент, который есть внутри */
+            overflow: hidden; /* Скрываем заднюю часть карточки */
+            margin-bottom: 20px;
         &__img {  
             display: block;
             margin: 0 auto;     
@@ -107,7 +113,56 @@
             font-size: 20px;
             font-weight: 700;
         }
-           
+        &__wrapper {/* Стилизуем оболочку для контента лицевая и оборотная сторона */
+            display: flex;          
+            width: calc(200% + 40px);
+        }
+        &__content {
+            width: 50%; /* будут занимать 50% от ширины */
+            margin-right: 0px;
+            transform: translateX(-100%); /* будет скрываться панель */
+            transition: 0.5s all;
+            &_active {
+                transform: translateX(0%); /* Когда активно, будет оставаться на месте */
+                margin-right: 20px;
+            }
+
+        }
+        &__list {
+            position: relative;
+            width: 50%; /* будут занимать 50% от ширины */ 
+            margin-left: 20px;
+            padding-right: 20px; /* чтобы могли выровнить контент */
+            transform: translateX(0%);
+            transition: 0.5s all;
+            padding-left: 19;/* Убираем у списка отступы, которые даны по умолчанию */
+            margin-bottom: 0;
+            list-style-type: none; /* Чтобы не было никаких идентификаторов */
+            
+            &_active {
+                transform: translateX(-100%);
+                margin-left: 0px;
+               
+            }
+            li {
+                position: relative;
+                margin-bottom: 20px;
+                color: #555555;
+                font-size: 14px;
+                font-weight: 300;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 5px;
+                    height: 5px;
+                    background-color: $main-color;
+                    left: -14px;
+                    top: 7px;
+                }
+            }
+
+        } 
+        
         
     }
     
