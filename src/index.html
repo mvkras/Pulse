@@ -116,6 +116,42 @@
 	</div>
 </section>
 
+<!-- СЕКЦИЯ С ТАБАМИ/Переключателями/Вкладками -->
+<section class="catalog">
+	<div class="container">
+		<h2 class="head-text">Каталог пульсометров</h2>
+		<!-- Для табов создаем список -->
+		<ul class="catalog__tabs"> <!-- назначаем модификатор active для 1го таба -->
+			<li class="catalog__tab catalog__tab_active"><div>Для фитнеса</div></li> <!-- Чтобы текст не наклонялся - помещаем их в div -->
+			<li class="catalog__tab"><div>для бега</div></li>
+			<li class="catalog__tab"><div>для триатлона</div></li>
+		</ul>
+<!-- Создадим отдельный контент для каждой странички 3 больших таба -->
+<div class="catalog__content">  <!-- Добавляем карточки -->
+ <!-- Делаем отдельный блок, возможно будем переиспользовать -->
+ <div class="catalog-item">
+	 <img src="img/pictures/clock.png" alt="pulse" class="catalog-item__img">
+	 <div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
+	 <div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
+	 <a href="#" class="catalog-item__link">подробнее</a>
+	 <hr>
+
+	 <!-- нижняя часть каталога с ценником -->
+	 <div class="catalog-item__footer">
+		 <div class="catalog-item__prices">  <!-- Создаем 2 ценника, старая и новая цена -->
+			<div class="catalog-item__old-prices">4 750 руб.</div>
+			<div class="catalog-item__new-prices">4 500 руб.</div>
+		 </div>
+		 <button class="button button_mini">КУПИТЬ</button>
+	 </div>
+ </div>
+</div>
+<div class="catalog__content"></div>
+<div class="catalog__content"></div>
+
+	</div>
+</section>
+
 
 <!-- ПОДКЛЮЧАЕМ JavaScript -->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> <!-- Подключили файл для Слайдера с сайта Slick, вместе с css файлов -->

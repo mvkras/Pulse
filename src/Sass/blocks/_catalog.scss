@@ -1,0 +1,114 @@
+/* Стилизуем табы */
+.catalog {   /* Подключаем файл в style.scss */
+    padding-bottom:103px;
+    &__tabs {
+        margin-top: 70px;
+        list-style-type: none; /* Уберем точки у списка */
+        display: flex;/* Выравниваем наши табы */
+        justify-content: center;
+        align-items: center;
+        /* Уберем отступы у ul */
+        margin-bottom: 0;
+        padding-left: 0;
+    }
+    &__tab {
+        width: 220px;
+        height: 50px;
+        border: solid 2px #d0d0d0;
+        text-align: center;
+        color: #6b6b6b;
+        font-size: 18px;
+        font-weight: 500;
+        text-transform: uppercase;
+        margin:0 5px;
+        line-height: 48px; /* чтобы выравнить в 1 строку какой-то эдемент задаем ему межстрочный интервал раззмером в этот блок в который вписываем надпись height: 50 px, тогда line-height: 48px */
+        /* наклоним наши табы */
+        transform: skewX(-30deg); /* Чтобы текст не наклонялся, помещаяем их в div */
+        transition: 0.4s all;/* Плавность при наведении */
+        cursor: pointer; /* Добавляем курсор для табов */
+        &:hover {
+            box-shadow: 3px 3px 20px $main-color; /* тень при наведении на табы x y размытие и 20px размытие, цвет */
+            border: none; /* Убираем границу, при наведении */
+        }
+        &_active { /* Добавляем модификатор для активного таба */
+            color: #ffffff;
+            background-color: $main-color;
+            border: none; /* Убираем границу для 1го таба */
+        }
+        div {
+            transform: skewX(30deg); /* Для div устанавливаем обратную трансформацию */
+        }
+    }
+    /* Стилизуем карточки сами карточки в отдельном файле, сделали его отдельным блоком */
+    &__content {  
+        margin-top: 60px;
+    }
+        &-item {
+            width: 300px;
+            min-height: 440px;  /* при необходимости экран будет растягиваться */
+            border: 2px solid #e8e8e8;
+            padding: 20px 20px 26px 20px; /* ограничим весь контент, который есть внутри */
+        &__img {  
+            display: block;
+            margin: 0 auto;     
+            max-width: 100%; /* При подставлении новой картинки, она была по размерам старой */
+            height: 200px;
+    
+        }
+        &__subtitle {
+            margin-top: 20px;
+            text-align: center;  
+            color: #0d0d0d;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        &__descr {
+            text-align: center;
+            margin-top: 16px;
+            color: #0d0d0d;
+            font-size: 14px;
+            font-weight: 300;
+        }
+        &__link {
+            display: block;
+            text-align: center;
+            margin-top: 17px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+            text-transform: uppercase;
+            color: $main-color;
+            &:hover {
+                color: $main-color; /* при наведени будет такой же цвет */
+            }
+        }
+        /* Стилизуем footer, где цена и кнопка */
+        hr {
+            margin-top: 19px;
+            margin-bottom: 21px;
+            height: 1px;
+            border-bottom: none; /* скроем 1 из границ черты */
+            background-color: #e8e8e8;
+        }
+        &__footer {
+            display: flex; /* чтобы все элементы становились друг за другом */
+            justify-content: space-between; /* раздвигаем элементы */
+            align-items: center;
+        }
+        &__old-prices {
+            color: #555555;
+            font-size: 14px;
+            font-weight: 300;
+            text-decoration: line-through;
+    
+        }
+        &__new-prices {
+            color: #050505;
+            font-size: 20px;
+            font-weight: 700;
+        }
+           
+        
+    }
+    
+}
