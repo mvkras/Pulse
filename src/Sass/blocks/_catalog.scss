@@ -42,10 +42,12 @@
     /* Стилизуем карточки сами карточки в отдельном файле, сделали его отдельным блоком */
     &__content {  
         margin-top: 60px;
-        display: flex;
+        display: none;
         justify-content: space-between;
         flex-wrap: wrap; /* Чтобы все не помещающиеся карточки скидывались вниз */
-        
+        &_active {
+            display: flex;
+        }
     }
         &-item {
             width: 300px;
@@ -160,7 +162,24 @@
                     top: 7px;
                 }
             }
+        }
+        &__back {
+            display: block;
+            position: absolute; /* чтобы ссылка была прикреплена к 1 месту */
+            bottom: 0; /* Чтобы ссылка всегда была внизу */
+            left: 50%;
+            transform: translateX(calc(-50% - 19px)); /* -19px это значение ставили list */
+            color: $main-color;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: underline;
+            text-transform: uppercase;
+            &:hover {
+                color: $main-color;
+            }
+            
 
+       
         } 
         
         

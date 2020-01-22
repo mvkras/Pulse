@@ -8,7 +8,9 @@
 @import 'blocks/forms';/* Импортируем блок формы заполнения, будем их переиспользовать */
 @import 'blocks/carousel'; /* Подключили файл с каруселью */
 @import 'blocks/catalog';  /* Подключили секция с табами */
-
+@import 'blocks/clients';  /* Подключили отзывы клиентов */
+@import 'blocks/footer';  /* Подключаем карты */
+@import 'blocks/overlay';  /* модальные окна */
 
 *{
     font-family: 'Museo Sans Cyrl', sans-serif;

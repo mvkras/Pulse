@@ -28,7 +28,7 @@
 				<div class="header__contacts"> <!-- Элемент контактов для связи -->
 				<a href="tel:+74999228974" class="header__phone">+7 (499) 922-89-74</a><!-- Создали отдельный элемент -->
 
-				<button class="button">заказать звонок</button>  <!--Создали отдельный блок button с классом button и будем его переиспользовать  -->
+				<button data-modal="consultation" class="button">заказать звонок</button>  <!--Создали отдельный блок button с классом button и будем его переиспользовать  -->
 			</div> 
 			</header>
 			<!-- ------Конец элементов блока header------------- -->
@@ -45,7 +45,7 @@
 			<div class="promo__icon"><img src="img/pictures/bg_icon3.png" alt="Чат">Ответим на все вопросы</div>
 		</div> <!-- Конец блока для иконок -->
 
-			<button class="button button_main">заказать консультацию</button> <!--Сделали модификатор для кнопки main  -->
+			<button data-modal="consultation" class="button button_main">заказать консультацию</button> <!--Сделали модификатор для кнопки main  -->
 			<div class="promo__link">или <a href="#"> ПЕРЕЙТИ В КАТАЛОГ </a></div>
 
 			</div> <!-- Конец обвертки -->
@@ -91,16 +91,16 @@
 				и мы перезвоним вам в течении 10 минут</div>
 
 <!-- -------------ДЕЛАЕМ ФОРМУ ЗАПОЛНЕНИЯ------- -->
-	<form class="feed-form" action="#" method="POST"> <!-- Создаем новый файл для форм, так как будем их переиспользовать потом -->
-		<input required type="text" name="name" placeholder="Ваше имя" autofocus>  <!-- required - это поле для обязательного заполнения -->
-		<input required type="number" name="phone" placeholder="Ваш телефон">   <!-- чтобы вводились только числа в это поле, пишем тип number -->
-		<input required type="email" name="e-mail" placeholder="Ваша почта"> 
-		<button class="button button_submit" >заказать консультацию"</button>		
+	<form id="consultation-form" class="feed-form" action="#" method="POST"> <!-- Создаем новый файл для форм, так как будем их переиспользовать потом -->
+		<input required type="text" name="name" placeholder="Ваше имя">
+		<input required  name="phone" placeholder="Ваш телефон">   <!-- чтобы вводились только числа в это поле, пишем тип number -->
+		<input required type="email" name="email" placeholder="Ваша почта"> 
+		<button  class="button button_submit" >заказать консультацию"</button>		
 	</form>
 	</div>
 </section>
 
-<!-- НАЧАЛО НОВОЙ СЕКЦИИ Слайдер/Карусель-->
+			<!----------------- НАЧАЛО НОВОЙ СЕКЦИИ Слайдер/Карусель--------->
 <section class="carousel">
 	<div class="container">
 		<!-- Создаем обвертку для слайдера -->
@@ -116,7 +116,7 @@
 	</div>
 </section>
 
-<!-- СЕКЦИЯ С ТАБАМИ/Переключателями/Вкладками -->
+						<!-- СЕКЦИЯ С ТАБАМИ/Переключателями/Вкладками -->
 <section class="catalog">
 	<div class="container">
 		<h2 class="head-text">Каталог пульсометров</h2>
@@ -129,24 +129,25 @@
 <!-- Создадим отдельный контент для каждой странички 3 больших таба -->
 <!-- КОНТЕНТ 1 -->
 
-<div class="catalog__content">  <!-- Добавляем карточки -->
+<div class="catalog__content catalog__content_active">  <!-- Добавляем карточки -->
  <!-- Делаем отдельный блок, возможно будем переиспользовать -->
 
  	<!-- Каталог 1 -->
  <div class="catalog-item"> 
 	<div class="catalog-item__wrapper">  <!-- Создаем обвертку, при клики на ссылку подробнее, активность класса быдет меняться -->
-		 <div class="catalog-item__content"> <!-- Лицевая сторона добавляем модификатор active -->
+		 <div class="catalog-item__content catalog-item__content_active"> <!-- Лицевая сторона добавляем модификатор active -->
 			<img src="img/pictures/clock.png" alt="pulse" class="catalog-item__img">
 			<div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
 			<div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
 			<a href="#" class="catalog-item__link">подробнее</a>
 		 </div>
  			<!-- оборотная сторона -->
-		 <ul class="catalog-item__list catalog-item__list_active">
+		 <ul class="catalog-item__list">
 			<li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
 			<li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
 			<li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
 			<li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+			<a href="#" class="catalog-item__back">назад</a>
 		 </ul>
 	</div>
 	 <hr>
@@ -163,18 +164,19 @@
       <!-- Каталог 2 --> 
  <div class="catalog-item"> 
 	<div class="catalog-item__wrapper">  <!-- Создаем обвертку, при клики на ссылку подробнее, активность класса быдет меняться -->
-		 <div class="catalog-item__content"> <!-- Лицевая сторона добавляем модификатор active -->
+		 <div class="catalog-item__content catalog-item__content_active"> <!-- Лицевая сторона добавляем модификатор active -->
 			<img src="img/pictures/clock.png" alt="pulse" class="catalog-item__img">
 			<div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
 			<div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
 			<a href="#" class="catalog-item__link">подробнее</a>
 		 </div>
  			<!-- оборотная сторона -->
-		 <ul class="catalog-item__list catalog-item__list_active">
+		 <ul class="catalog-item__list">
 			<li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
 			<li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
 			<li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
 			<li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+			<a href="#" class="catalog-item__back">назад</a>
 		 </ul>
 	</div>
 	 <hr>
@@ -191,18 +193,19 @@
     <!-- Каталог 3 -->
  <div class="catalog-item"> 
 	<div class="catalog-item__wrapper">  <!-- Создаем обвертку, при клики на ссылку подробнее, активность класса быдет меняться -->
-		 <div class="catalog-item__content"> <!-- Лицевая сторона добавляем модификатор active -->
+		 <div class="catalog-item__content catalog-item__content_active"> <!-- Лицевая сторона добавляем модификатор active -->
 			<img src="img/pictures/clock.png" alt="pulse" class="catalog-item__img">
 			<div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
 			<div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
 			<a href="#" class="catalog-item__link">подробнее</a>
 		 </div>
  			<!-- оборотная сторона -->
-		 <ul class="catalog-item__list catalog-item__list_active">
+		 <ul class="catalog-item__list">
 			<li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
 			<li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
 			<li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
 			<li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+			<a href="#" class="catalog-item__back">назад</a>
 		 </ul>
 	</div>
 	 <hr>
@@ -219,18 +222,19 @@
  		<!-- КАТАЛОГ 4 -->
  <div class="catalog-item"> 
 	<div class="catalog-item__wrapper">  <!-- Создаем обвертку, при клики на ссылку подробнее, активность класса быдет меняться -->
-		 <div class="catalog-item__content"> <!-- Лицевая сторона добавляем модификатор active -->
+		 <div class="catalog-item__content catalog-item__content_active"> <!-- Лицевая сторона добавляем модификатор active -->
 			<img src="img/pictures/clock.png" alt="pulse" class="catalog-item__img">
 			<div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
 			<div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
 			<a href="#" class="catalog-item__link">подробнее</a>
 		 </div>
  			<!-- оборотная сторона -->
-		 <ul class="catalog-item__list catalog-item__list_active">
+		 <ul class="catalog-item__list">
 			<li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
 			<li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
 			<li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
 			<li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+			<a href="#" class="catalog-item__back">назад</a>
 		 </ul>
 	</div>
 	 <hr>
@@ -247,18 +251,19 @@
  		<!-- КАТАЛОГ 5 -->
  <div class="catalog-item"> 
 	<div class="catalog-item__wrapper">  <!-- Создаем обвертку, при клики на ссылку подробнее, активность класса быдет меняться -->
-		 <div class="catalog-item__content"> <!-- Лицевая сторона добавляем модификатор active -->
+		 <div class="catalog-item__content catalog-item__content_active"> <!-- Лицевая сторона добавляем модификатор active -->
 			<img src="img/pictures/clock.png" alt="pulse" class="catalog-item__img">
 			<div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
 			<div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
 			<a href="#" class="catalog-item__link">подробнее</a>
 		 </div>
  			<!-- оборотная сторона -->
-		 <ul class="catalog-item__list catalog-item__list_active">
+		 <ul class="catalog-item__list">
 			<li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
 			<li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
 			<li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
 			<li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+			<a href="#" class="catalog-item__back">назад</a>
 		 </ul>
 	</div>
 	 <hr>
@@ -275,18 +280,19 @@
 		 <!-- КАТАЛОГ 6 -->
  <div class="catalog-item"> 
 	<div class="catalog-item__wrapper">  <!-- Создаем обвертку, при клики на ссылку подробнее, активность класса быдет меняться -->
-		 <div class="catalog-item__content"> <!-- Лицевая сторона добавляем модификатор active -->
+		 <div class="catalog-item__content catalog-item__content_active"> <!-- Лицевая сторона добавляем модификатор active -->
 			<img src="img/pictures/clock.png" alt="pulse" class="catalog-item__img">
 			<div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
 			<div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
 			<a href="#" class="catalog-item__link">подробнее</a>
 		 </div>
  			<!-- оборотная сторона -->
-		 <ul class="catalog-item__list catalog-item__list_active">
+		 <ul class="catalog-item__list">
 			<li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
 			<li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
 			<li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
 			<li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+			<a href="#" class="catalog-item__back">назад</a>
 		 </ul>
 	</div>
 	 <hr>
@@ -306,18 +312,19 @@
 <div class="catalog__content">
 	<div class="catalog-item"> 
 		<div class="catalog-item__wrapper">  <!-- Создаем обвертку, при клики на ссылку подробнее, активность класса быдет меняться -->
-			 <div class="catalog-item__content"> <!-- Лицевая сторона добавляем модификатор active -->
+			 <div class="catalog-item__content catalog-item__content_active"> <!-- Лицевая сторона добавляем модификатор active -->
 				<img src="img/pictures/clock.png" alt="pulse" class="catalog-item__img">
 				<div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
 				<div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
 				<a href="#" class="catalog-item__link">подробнее</a>
 			 </div>
 				 <!-- оборотная сторона -->
-			 <ul class="catalog-item__list catalog-item__list_active">
+			 <ul class="catalog-item__list">
 				<li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
 				<li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
 				<li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
 				<li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+				<a href="#" class="catalog-item__back">назад</a>
 			 </ul>
 		</div>
 		 <hr>
@@ -338,18 +345,19 @@
 	<!-- КОНТЕНТ 3/ ЭЛЕМЕНТ 1  -->
 	<div class="catalog-item"> 
 		<div class="catalog-item__wrapper">  <!-- Создаем обвертку, при клики на ссылку подробнее, активность класса быдет меняться -->
-			 <div class="catalog-item__content"> <!-- Лицевая сторона добавляем модификатор active -->
+			 <div class="catalog-item__content catalog-item__content_active"> <!-- Лицевая сторона добавляем модификатор active -->
 				<img src="img/pictures/clock.png" alt="pulse" class="catalog-item__img">
 				<div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
 				<div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
 				<a href="#" class="catalog-item__link">подробнее</a>
 			 </div>
 				 <!-- оборотная сторона -->
-			 <ul class="catalog-item__list catalog-item__list_active">
+			 <ul class="catalog-item__list">
 				<li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
 				<li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
 				<li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
 				<li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+				<a href="#" class="catalog-item__back">назад</a>
 			 </ul>
 		</div>
 		 <hr>
@@ -366,18 +374,19 @@
 	 <!-- КАТАЛОГ 3/ ЭЛЕМЕНТ 2 -->
 	 <div class="catalog-item"> 
 		<div class="catalog-item__wrapper">  <!-- Создаем обвертку, при клики на ссылку подробнее, активность класса быдет меняться -->
-			 <div class="catalog-item__content"> <!-- Лицевая сторона добавляем модификатор active -->
+			 <div class="catalog-item__content catalog-item__content_active"> <!-- Лицевая сторона добавляем модификатор active -->
 				<img src="img/pictures/clock.png" alt="pulse" class="catalog-item__img">
 				<div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
 				<div class="catalog-item__descr">Для первых шагов в тренировках, основанных на сердечном ритме</div>
 				<a href="#" class="catalog-item__link">подробнее</a>
 			 </div>
 				 <!-- оборотная сторона -->
-			 <ul class="catalog-item__list catalog-item__list_active">
+			 <ul class="catalog-item__list">
 				<li>Вы услышите звуковое оповещение о нужном пульсе во время тренировки;</li>
 				<li>Вы увидите информативный графический индикатор целевых тренировочных зон пульса;</li>
 				<li>Также Вы увидите информацию о расходе калорий за тренировку;</li>
 				<li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+				<a href="#" class="catalog-item__back">назад</a>
 			 </ul>
 		</div>
 		 <hr>
@@ -391,15 +400,117 @@
 		 </div>
 	 </div>
 </div>
-
 	</div>
 </section>
+
+
+		<!-------------------------------------СЕКЦИЯ ОТЗЫВЫ КЛИЕНТОВ------------------------  -->
+		<section class="feed">
+			<div class="container">
+				<h2 class="head-text">отзывы клиентов</h2>
+				<div class="feed__item">
+					<img src="img/icons/client1.png" alt="Ирина Иванченко" class="feed__img">
+					<div class="feed__text">
+						<div class="feed__subtitle">Ирина Иванченко</div>
+						<div class="feed__count">2 полумарафона</div>
+						<div class="feed__descr">Не знала, что себе купить - обратилась к ребятам из RunSmart - подобрали пульсометр, который подошёл именно под мои цели и финансовые возможности.
+						Через некоторое время решила обновить гаджет - не раздумывая обратилась туда же.
+						<br><br>
+						Новые цели - новый гаджет!
+						<br><br>  
+						Спасибо, RunSmart! 
+						</div>
+					</div>
+				</div>
+				<div class="feed__item">
+					<img src="img/icons/client2.png" alt="Иван Сёмочкин" class="feed__img">
+					<div class="feed__text">
+						<div class="feed__subtitle">Иван Сёмочкин</div>
+						<div class="feed__count">1 полумарафон</div>
+						<div class="feed__descr">Крутая штука-пульсометр. Обычно без них бегал. Оказывается только хуже себе делал. 
+						Купил пульсометр, ещё в подарок получил тренировку. Со мной вместе провели первую тренировку, научили пользоваться новым гаджетом. Также объяснили основы анатомии, составили план тренировок на месяц вперёд.
+						<br><br> 
+						С ними подготовился к своему первому полумарафону! Спасибо!!!
+						</div>
+					</div>
+				</div>
+				<div class="feed__item">
+					<img src="img/icons/client3.png" alt="Юлия Дашкина" class="feed__img">
+					<div class="feed__text">
+						<div class="feed__subtitle">Юлия Дашкина</div>
+						<div class="feed__count">2 полумарафона</div>
+						<div class="feed__descr">Долго не могла начать бегать, т.к. до этого несколько раз начинала, но становилось тяжело и я бросала. От друзей услышала о RunSmart и о беге с контролем пульса и решила попробовать.
+						<br><br> 
+						Позвонила, ребята поинтересовались моими целями и подобрали очень интересный вариант со скидкой! Теперь бегаю и наслаждаюсь бегом! Пробежала уже 2 полумарафона и несколько более коротких забегов и не намерена останавливаться!
+						<br><br> 
+						Спасибо!!!
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- --------------------СЕКЦИЯ С КАРТОЙ ----------------->
+	<footer class="footer">
+	
+		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A2ee5ec78b60d2310e52d91a45374730a34d5ef3b345fb8aa40540d256108141c&amp;width=100%25&amp;height=630&amp;lang=ru_RU&amp;scroll=false"></script>
+			<div class="footer__info"></div>
+
+			<div class="footer__info">
+				<address class="footer__address">Москва, Мясницкий проезд, д.3с1</address>
+				<a class="footer__phone" href="tel:84999228974">8 (499) 922-89-74</a>
+				<div class="footer__social">
+					<a href="#" class="footer__social-item"> <img src="img/icons/social1.png" alt="facebook"> </a>
+					<a href="#" class="footer__social-item"> <img src="img/icons/social2.png" alt="instagram"> </a>
+					<a href="#" class="footer__social-item"> <img src="img/icons/social3.png" alt="pinterest"> </a>
+				</div>
+			</div>
+	</footer>
+
+	<!-- ----------------СОЗДАЕМ МОДАЛЬНЫЕ ОКНА--------------- -->
+	<div class="overlay">
+		<div class="modal" id="consultation">
+			<div class="modal__close">&times;</div> <!-- Спец символ для html крестик -->
+			<div class="modal__subtitle">Просто заполните форму заявки</div>
+			<div class="modal__descr">и мы перезвоним вам в течении 10 минут</div>
+			<form class="feed-form feed-form_mt25" action="#" method="POST"> <!-- Создаем новый файл для форм, так как будем их переиспользовать потом -->
+				<input required type="text" name="name" placeholder="Ваше имя" autofocus>  <!-- required - это поле для обязательного заполнения -->
+				<input required  name="phone" placeholder="Ваш телефон">   <!-- чтобы вводились только числа в это поле, пишем тип number -->
+				<input required type="email" name="email" placeholder="Ваша почта"> 
+				<button class="button button_submit" >заказать консультацию"</button>		
+			</form>
+		</div>
+
+		<!-- ----2е МОДАЛЬНОЕ ОКНО---- -->
+
+		<div class="modal" id="order">
+			<div class="modal__close">&times;</div> <!-- Спец символ для html крестик -->
+			<div class="modal__subtitle">Ваш заказ:</div>
+			<div class="modal__descr">Пульсометр Polar FT1</div>
+			<form class="feed-form feed-form_mt25" action="#" method="POST"> <!-- Создаем новый файл для форм, так как будем их переиспользовать потом -->
+				<input  type="text" name="name" placeholder="Ваше имя" autofocus>  <!-- required - это поле для обязательного заполнения -->
+				<input   name="phone" placeholder="Ваш телефон">   <!-- чтобы вводились только числа в это поле, пишем тип number -->
+				<input  type="email" name="email" placeholder="Ваша почта"> 
+				<button class="button button_submit" >Купить</button>		
+			</form>
+		</div>
+
+		<!-- 3е МОДАЛЬНОЕ ОКНО -->
+		<div class="modal modal_mini" id="thanks">
+			<div class="modal__close">&times;</div> <!-- Спец символ для html крестик -->
+			<div class="modal__subtitle">Спасибо за вашу заявку!</div>
+			<div class="modal__descr">Наш менеджер свяжется с вами в ближайшее время!</div>
+		</div>
+	</div>
 
 
 <!-- ПОДКЛЮЧАЕМ JavaScript -->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> <!-- Подключили файл для Слайдера с сайта Slick, вместе с css файлов -->
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> 
 <script src="js/slick.min.js"></script> <!-- Подключили файл для Слайдера с сайта Slick, вместе с css файлов -->
+<script src="js/jquery.validate.min.js"></script><!-- Подключаем валидацию форм -->
+<script src="js/jquery.maskedinput.min.js"></script><!-- ПОДКЛЮЧАЕМ МАСКИ ВВОДА -->
 <script src="js/script.js"></script>
 </body>
 </html>

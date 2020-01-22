@@ -1,0 +1,58 @@
+/* Модальные окна */
+.overlay {  /* Подключаем в style */
+    display: none; /* Скроем оверлей (затемнение) */
+    position: fixed;
+    top: 0; /* Где будет позиционироваться этот блок */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.56); /* opracity не использовать, так как содержимое блока тоже будет прозрачным */
+    /* opacity: 0.56; */ /* Прозрачность от 0 до 1 56% прозрачности */
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 380px;
+    min-height: 400px; /* Установим валидацию */
+    background-color: #f2f2f2;
+    padding: 38px 40px 40px 40px;
+    &__close {
+        position: absolute;
+        top: 0;
+        right: -40px;
+        font-size: 41px;
+        line-height: 21px;
+        color: $main-color;
+        cursor: pointer;
+    }
+    &__subtitle {
+        text-align: center;
+        color: #0d0d0d;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    &__descr {
+        text-align: center;
+        color: #0d0d0d;
+        font-size: 14px;
+        font-weight: 500;
+    }
+    &_mini {
+        min-height: 140px;
+    }
+    .error {
+        border: 1px solid red;
+        
+    }
+    label.error {
+        text-align: center;
+        margin-bottom: 15px;
+        border: none;
+        color: red;
+    }
+}
+#consultation, #order, #thanks{
+    display: none; /* Скроем окно */
+}
