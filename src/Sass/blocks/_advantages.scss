@@ -39,5 +39,17 @@
             text-transform: uppercase; 
         }
     }
+    &__img {
+        &_animation {
+            animation-name: heartBeat;
+            animation-duration: 3s; /* Продолжительность анимации */
+            animation-iteration-count: infinite;/* Цикл анимации */
+            &:hover {
+                animation-play-state: paused; /* При наведении на сердце, оно замирает */
+            }
+        }
+    }
 
 }
+
+    

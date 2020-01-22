@@ -1,4 +1,6 @@
 @import 'base/variables'; /* подключили файл значения из папки база */
+@import 'base/animations';  /* Подключаем анимацию */
+/* ----------------------------------------------------------------------------- */
 @import 'blocks/promo'; /* Подключили файл промо из папки blocks */
 @import 'blocks/header';  /*подключили файл header который будем переиспользовать там логотип гл секция  */
 @import 'blocks/advantages';
@@ -11,6 +13,7 @@
 @import 'blocks/clients';  /* Подключили отзывы клиентов */
 @import 'blocks/footer';  /* Подключаем карты */
 @import 'blocks/overlay';  /* модальные окна */
+@import 'blocks/pageUp';/* Подключаем стрелку */
 
 *{
     font-family: 'Museo Sans Cyrl', sans-serif;
